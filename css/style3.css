@@ -1,0 +1,16 @@
+body {
+    margin: 5px;
+}
+
+
+
+.red{
+    color: red;
+    font-weight: bold;
+}
+
+.title{
+    background-color: blue;
+    color: white;
+    display: inline;
+}
