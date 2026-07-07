@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box{
+            background-color: red;
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            padding: 0px 30px; /*상하 좌우*/
+            margin: 10px 20px 30px 40px /*상 우 하 좌*/
+        }
+
+        .box2{
+            box-sizing: border-box;
+            border: 2px solid blue;
+            width: 100px;
+            background-color: olive;
+            box-shadow: 10px 4px 5px 2px #817f7f; 
+                        /*가로 세로 흐림(생략가능) 번짐(생략가능)*/
+            border-radius: 10px; /*테두리 둥근 모양의 정도*/
+            text-align: center;
+            height: 100px;
+            line-height: 100px;
+        }
+
+        .img{
+            border-radius: 50%;
+        }
+
+        .banner{
+            background-color: black;
+            display: flex; /*자식 클래스를 정렬 가능*/
+            justify-content: space-between; /*주축의 정렬 방법*/
+        }
+
+        .boxitem{
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+            border: 1px solid #1076d6;
+            /*display: inline-block; 박스 가로로 나열*/
+            border-radius: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box">a</div>
+    <div class="box2">안녕</div>
+
+    <img class="img box2" src="/html/img/pf.jpg" alt=""><!--클래스에 속성 여러개 들어갈 수 있다-->
+
+    <div class="banner">배너
+        <div class="boxitem">1</div>
+        <div class="boxitem">2</div>
+        <div class="boxitem">3</div>
+        <div class="boxitem">4</div>
+    </div>
+</body>
+</html>
