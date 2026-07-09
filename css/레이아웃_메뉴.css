@@ -59,7 +59,7 @@ height: 200vh;
 }
 
 .menu_item:hover > .submenu, .menu_item:hover{
-    background-color: blanchedalmond;
+    background-color: pink;
     display: block;
     z-index: 999;
 }
