@@ -7,6 +7,28 @@
   <link rel="stylesheet" href="/css/movie_styles.css">
   <link rel="stylesheet" href="/css/movie_basic.css">
   <!-- <link rel="stylesheet" href="answer_key.css"> -->
+   <style>
+    tr:nth-child(2n){
+      background-color: var(--navy);
+    }
+
+    tr:nth-child(2n) td{
+      color: white;
+    }
+
+    td:first-child{
+      padding-left: 20px;
+    }
+
+    tr:first-child td{
+      color: aqua;
+    }
+
+    .grid article:nth-child(2){
+      /* border: 1px solid */
+      box-shadow: 0 4px 20px black
+    } 
+      </style>
 </head>
 <body>
 
@@ -49,7 +71,7 @@
   <!--카드-->
   <section class="movie-list bg-light max-w-lg mt-7 m-auto">
     <h2 class="border-left-2 my-2 pl-4">이번 달 추천작</h2>
-    <div class="d-flex flex-wrap gap-1">
+    <div class="grid d-flex flex-wrap gap-1">
 
       <article class="card mx-4 rounded-lg overflow-hidden" data-rating="9.2">
         <img src="https://picsum.photos/seed/movie1/300/400" alt="스텔라 오디세이 포스터">
