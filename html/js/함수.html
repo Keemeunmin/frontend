@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>함수</h1>
+    <script>
+        /*
+        function 함수명(매개변수1, 매개변수2) { // ① 이름, ② 매개변수(입력)
+            // ③ 함수 본문 — 실행할 코드
+            return 결과값; // ④ 반환값(출력, 생략 가능)
+        }
+        */
+
+
+        function print() {
+            console.log("print");
+        }
+
+        // 화살표 함수로 변환
+        let arrow_print = () => console.log("print")
+        arrow_print();
+
+        // 매개변수는 없고 반환(return)이 없는 함수
+        // 함수의 실행 결과 undefined가 반환됨
+        function print(msg) {
+            console.log(msg);
+        }
+
+        let arrow_print1 = msg => console.log(msg);
+
+        // 두 개의 수를 입력 받아서 두 수의 합을 반환하는 함수
+        function add(i, j) {
+            return i + j;
+        }
+
+        let arrow_add = (i, j) => i + j;
+
+
+        // 함수의 실행결과 반환값을 재사용하기 위해서 변수에 저장했다가 다시 사용
+        add(1, 2) // 호출만 하는 것은 의미 없음
+        let res = add(1, 2);
+        console.log(res);
+
+        // <익명의 함수>
+        // 함수를 변수에 저장하거나 함수를 매개변수로 전달할 수 있다(콜백함수)
+        let greet = function (name) {
+            console.log(`${name}님 반가워요!`)
+        }
+
+        // 실행하는 방법
+        greet("은민")
+
+        // 2개의 수를 입력 받아서 두 수의 합을 변환하는 함수
+        // 타입을 확인해서 숫자가 아니라면 '숫자를 입력해주세요'
+        // 함수명 add2
+        function add2(num1, num2) {
+            if (typeof (num1) != 'number' || typeof (num2) != 'number') {
+                return '숫자를 입력해주세요'
+            }
+            return num1 + num2;
+        }
+        console.log(add2(10, 20));
+        console.log(add2("10", 20));
+
+        // 함수 ? 기능을 정의해놓고 반복적으로 사용
+        // 외부로부터 어떤 값을 받아서 처리 후 반환하는
+        // <선언적 함수>
+        function welcome1(){
+            console.log("무비 컬렉션에 오신 것을 환영합니다");
+            let box = document.querySelector(".box");
+            // 요소의 컨텐츠를 변경
+            // += : 기존 컨텐츠를 남기고 이어서 작성
+            // = : 기존 컨텐츠를 지우고 작성
+            box.innerText = "무비 컬렉션에 오신 것을 환영합니다";
+        }
+
+        // <익명의 함수> ----> 콜백함수(매우 중요)
+        let welcome2 = function(){
+            console.log("무비 컬렉션에 오신 것을 환영합니다");
+        }
+
+        let welcome3 = () => {
+            console.log("무비 컬렉션에 오신 것을 환영합니다");
+        }
+    </script>
+
+    <div class="box"></div>
+    
+</body>
+
+</html>
